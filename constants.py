@@ -1,9 +1,5 @@
-import math
-from math import pi
+import math as m
 
-amplitude_back = pi/4
-frequency_back = 5
-phaseOffset_back = 0
-amplitude_front = pi/4
-frequency_front = 5
-phaseOffset_front = 0
+amplitude = 2
+frequency = m.pi/2
+phaseOffset = 0
