@@ -10,8 +10,6 @@ class ROBOT:
         self.motors = {}
         self.robotID = p.loadURDF("body.urdf")
         self.nn = NEURAL_NETWORK("brain.nndf")
-        self.desiredAngle1 = []
-        self.desiredAngle2 = []
 
     def Prepare_To_Sense(self):
         for linkName in pyrosim.linkNamesToIndices:

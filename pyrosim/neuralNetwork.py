@@ -104,6 +104,9 @@ class NEURAL_NETWORK:
 
         for neuronName in self.neurons:
 
+            # print(type(self.neurons))
+            # print(type(neuronName))
+
             if self.neurons[neuronName].Is_Sensor_Neuron():
 
                 self.neurons[neuronName].Update_Sensor_Neuron()
