@@ -8,7 +8,7 @@ class ROBOT:
     def __init__(self):
         self.sensors = {}
         self.motors = {}
-        self.robotID = p.loadURDF("body.urdf")
+        self.robotID = p.loadURDF("body.urdf")  # a body ID, the unique ID of a body in the simulation.
         self.nn = NEURAL_NETWORK("brain.nndf")
 
     def Prepare_To_Sense(self):
@@ -39,4 +39,15 @@ class ROBOT:
 
     def Think(self):
         self.nn.Update()
-        self.nn.Print()
+        # self.nn.Print()
+
+    def Get_Fitness(self):
+        stateOfLinkZero = p.getLinkState(self.robotID, 0)
+        # it is a tuple with a bunch of tuples inside it.
+        # the first tuple contains the position of the link
+        xCoordinateOfLinkZero = stateOfLinkZero[0][0]
+        f = open("fitness.txt", "w")
+        f.write(str(xCoordinateOfLinkZero))
+        f.close()
+        # print(xCoordinateOfLinkZero)
+        exit()

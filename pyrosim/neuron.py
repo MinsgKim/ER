@@ -144,12 +144,12 @@ class NEURON:
                 self.Allow_Presynaptic_Neuron_To_Influence_Me(weight,presyn_neuron_value)
                 # print(self.Get_Value())
         self.Threshold()
-        print(self.Get_Value())
+        # print(self.Get_Value())
         # exit()
 
 
 
     def Allow_Presynaptic_Neuron_To_Influence_Me(self, weight, presyn_nrn_value):
-        print(weight)
-        print(presyn_nrn_value)
+        # print(weight)
+        # print(presyn_nrn_value)
         return self.Add_To_Value(presyn_nrn_value * weight)
