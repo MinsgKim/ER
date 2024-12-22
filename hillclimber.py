@@ -72,7 +72,7 @@ class HILL_CLIMBER:
 
         pyrosim.End()
 
-    def Create_Brain(self,who):
+    def Create_Brain(self, who):
 
         pyrosim.Start_NeuralNetwork("brain.nndf")
 
