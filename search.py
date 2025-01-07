@@ -1,11 +1,12 @@
 import os
-from hillclimber import HILL_CLIMBER
+import constants as c
+from parallelhillclimber import PARALLEL_HILL_CLIMBER
 
-hc = HILL_CLIMBER()
-hc.Create_World()
-hc.Create_Body()
-hc.Create_Brain(hc.parent)
+for i in range(2 + 2 * c.populationSize):
+    os.system(f"del brain{i}.nndf")
+    os.system(f"del fitness{i}.txt")
+phc = PARALLEL_HILL_CLIMBER()
+phc.Evolve()
 
-hc.Evolve()
-
-os.system("python simulate.py GUI")
+# print(phc.parents[0].fitness)
+# print(phc.parents[1].fitness)
