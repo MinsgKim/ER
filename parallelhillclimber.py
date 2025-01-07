@@ -74,6 +74,6 @@ class PARALLEL_HILL_CLIMBER:
             else:
                 self.best_parent = self.parents[i + 1]
 
-        self.best_parent.Start_Simulation("GUI")
+        self.best_parent.Start_Simulation(GUI)
         self.best_parent.Wait_For_Simulation_To_End()
 
